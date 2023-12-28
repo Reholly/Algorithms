@@ -1,18 +1,12 @@
-﻿using Algorithms.Searching;
-using Algorithms.Sorts;
+﻿using Algorithms.Sorts;
 
-int[] array = {1, 5 ,1 , 2 ,0, -1 , 20 , -194};
+string[] array = {"sff", "apple", "banana"};
 
-QuickSort sort = new QuickSort();
+var sort = new RadixSort();
 
-sort.Sort(array, 0, array.Length - 1);
+sort.Sort(array, 0, array.Length - 1, 0, new string[array.Length]);
 
 foreach(var i in array)
 {
     Console.Write($"{i} ");
 }
-
-Console.WriteLine();
-var search = new RecursiveBinarySearch();
-var result = search.Search(array, -100, 0, array.Length - 1);
-Console.WriteLine(result);
